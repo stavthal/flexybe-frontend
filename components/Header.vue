@@ -1,7 +1,7 @@
 <template>
   <div class="navbar">
     <div>
-      <h1>FlexyBe</h1>
+      <h1 class="text-3xl">FlexyBe</h1>
     </div>
 
     <nav class="marketing-links">
