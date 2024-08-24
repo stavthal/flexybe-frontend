@@ -1,7 +1,7 @@
 <template>
   <div class="navbar">
     <div>
-      <h1 class="text-3xl">FlexyBe</h1>
+      <h1 class="text-3xl font-bold">FlexyBe</h1>
     </div>
 
     <nav class="marketing-links">
@@ -10,6 +10,7 @@
     </nav>
 
     <nav class="auth-links">
+      <DarkModeSwitch />
       <NuxtLink to="/register">Sign Up</NuxtLink>
       <NuxtLink to="/login">Login</NuxtLink>
     </nav>
@@ -19,6 +20,9 @@
 <script setup lang="ts"></script>
 
 <style scoped>
+h1 {
+  font-family: "Montserrat";
+}
 nav {
   display: flex;
   gap: 1rem;
