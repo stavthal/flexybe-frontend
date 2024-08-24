@@ -1,5 +1,6 @@
 <template>
   <Header />
-  <h1>Default layout</h1>
-  <slot />
+  <div class="container mx-2">
+    <slot />
+  </div>
 </template>
