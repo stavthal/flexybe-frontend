@@ -20,6 +20,7 @@
       <input
         type="checkbox"
         v-model="darkMode"
+        value="dark"
         class="toggle theme-controller"
       />
       <svg
