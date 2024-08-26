@@ -1,16 +1,23 @@
 <template>
-  <div class="flex items-center justify-around w-screen px-4 py-8">
-    <div class="flex flex-col">
-      <h1 class="mb-4 text-4xl font-bold text-primary`">Your Hero Heading</h1>
-      <p class="text-lg">Your hero text goes here.</p>
+  <div class="flex justify-around w-screen px-4 py-8">
+    <div class="flex flex-col w-4/12 mt-12">
+      <h1 class="mb-4 font-bold text-8xl text-primary">
+        Flexify Your Workflow.
+      </h1>
+      <p class="text-2xl text-white">
+        Streamline your projects with seamless tools that adapt to the way
+        <span class="font-semibold text-success">you</span>
+        work best.
+      </p>
     </div>
     <div class="flex max-lg:hidden">
       <div class="relative">
         <!-- Shadow container -->
         <div
           class="absolute inset-0 bg-gray-700 rounded-md opacity-50 dark:bg-gray-300 blur-lg"
-        ></div>
+        />
         <!-- Image with animation -->
+        <!-- eslint-disable-next-line vue/html-self-closing -->
         <img
           :src="imageUrl"
           alt="Hero Image"
