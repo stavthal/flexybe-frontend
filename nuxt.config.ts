@@ -10,5 +10,11 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: ["@nuxtjs/color-mode", "@nuxtjs/tailwindcss"],
+  modules: ["@nuxtjs/color-mode", "@nuxtjs/tailwindcss", "@nuxt/eslint"],
+  tailwindcss: {
+    cssPath: ["~/assets/css/tailwind.css", { injectPosition: "first" }],
+  },
+  typescript: {
+    typeCheck: true,
+  },
 });
