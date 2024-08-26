@@ -1,9 +1,7 @@
 <template>
   <div class="flex items-center justify-around w-screen px-4 py-8">
     <div class="flex flex-col">
-      <h1 class="mb-4 text-4xl font-bold text-red-500 dark:text-green-500">
-        Your Hero Heading
-      </h1>
+      <h1 class="mb-4 text-4xl font-bold text-primary`">Your Hero Heading</h1>
       <p class="text-lg">Your hero text goes here.</p>
     </div>
     <div class="flex max-lg:hidden">
