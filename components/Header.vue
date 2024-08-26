@@ -1,6 +1,7 @@
 <template>
   <div class="navbar bg-base-100">
     <div class="navbar-start">
+      <!-- Mobile Menu -->
       <div class="dropdown">
         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
           <svg
@@ -22,37 +23,31 @@
           tabindex="0"
           class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
         >
-          <li><a>Item 1</a></li>
+          <li><NuxtLink to="/contact">Contact</NuxtLink></li>
+          <li><NuxtLink to="#">Pricing</NuxtLink></li>
+          <div class="divider"></div>
           <li>
-            <a>Parent</a>
-            <ul class="p-2">
-              <li><a>Submenu 1</a></li>
-              <li><a>Submenu 2</a></li>
-            </ul>
+            <NuxtLink to="#">Sign Up</NuxtLink>
           </li>
-          <li><a>Item 3</a></li>
+          <li><NuxtLink to="#">Login</NuxtLink></li>
         </ul>
       </div>
-      <NuxtLink><h1 class="text-4xl btn btn-ghost">FlexyBe</h1></NuxtLink>
+      <NuxtLink to="/"
+        ><h1 class="text-4xl btn btn-ghost">FlexyBe</h1></NuxtLink
+      >
     </div>
     <div class="hidden navbar-center lg:flex">
       <ul class="px-1 menu menu-horizontal">
         <li><NuxtLink to="/contact">Contact</NuxtLink></li>
-        <li><NuxtLink to="/pricing">Pricing</NuxtLink></li>
-        <!-- <li> -->
-        <!-- <details>
-            <summary>Parent</summary>
-            <ul class="p-2">
-              <li><a>Submenu 1</a></li>
-              <li><a>Submenu 2</a></li>
-            </ul>
-          </details> -->
-        <!-- </li> -->
+        <li><NuxtLink to="#">Pricing</NuxtLink></li>
       </ul>
     </div>
     <div class="navbar-end">
       <DarkModeSwitch />
-      <a class="btn">Button</a>
+      <div class="max-lg:hidden">
+        <NuxtLink to="#" class="btn btn-ghost">Sign Up</NuxtLink>
+        <NuxtLink to="#" class="btn btn-ghost">Login</NuxtLink>
+      </div>
     </div>
   </div>
 </template>

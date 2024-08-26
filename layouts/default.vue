@@ -1,6 +1,6 @@
 <template>
   <Header />
-  <div class="container mx-2">
+  <div class="container">
     <slot />
   </div>
 </template>
