@@ -8,6 +8,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
+    "test": "vitest run",
+    "test-watch": "vitest",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
@@ -19,11 +21,17 @@
     "vue": "latest"
   },
   "devDependencies": {
+    "@nuxt/test-utils": "^3.14.1",
+    "@testing-library/vue": "^8.1.0",
+    "@vue/test-utils": "^2.4.6",
     "autoprefixer": "^10.4.20",
     "daisyui": "^4.12.10",
+    "happy-dom": "^15.0.0",
+    "playwright-core": "^1.46.1",
     "postcss": "^8.4.41",
     "tailwindcss": "^3.4.10",
     "typescript": "^5.5.4",
+    "vitest": "^2.0.5",
     "vue-tsc": "^2.0.29"
   }
 }
