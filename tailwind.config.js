@@ -9,7 +9,27 @@ export default {
     "./error.vue",
   ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        slideInLeft: {
+          "0%": { transform: "translateX(-100%)", opacity: "0" },
+          "100%": { transform: "translateX(0)", opacity: "1" },
+        },
+        slideInRight: {
+          "0%": { transform: "translateX(100%)", opacity: "0" },
+          "100%": { transform: "translateX(0)", opacity: "1" },
+        },
+        fadeInZoom: {
+          "0%": { transform: "scale(0.8)", opacity: "0" },
+          "100%": { transform: "scale(1)", opacity: "1" },
+        },
+      },
+      animation: {
+        "slide-in-left": "slideInLeft 1s ease-out",
+        "slide-in-right": "slideInRight 1s ease-out",
+        "fade-in-zoom": "fadeInZoom 1s ease-out",
+      },
+    },
   },
   daisyui: {
     themes: [

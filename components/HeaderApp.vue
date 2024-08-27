@@ -38,7 +38,7 @@
         >
       </div>
       <div class="hidden navbar-center lg:block">
-        <ul class="gap-2 px-1 text-lg menu menu-horizontal">
+        <ul class="gap-2 px-1 text-xl menu menu-horizontal">
           <li>
             <NuxtLink to="/contact">Contact</NuxtLink>
           </li>
