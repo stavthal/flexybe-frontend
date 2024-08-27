@@ -1,6 +1,6 @@
 <template>
   <div class="px-6">
-    <label class="flex gap-2 cursor-pointer">
+    <label class="flex gap-2 bg-transparent cursor-pointer">
       <!-- Sun Icon -->
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -20,9 +20,9 @@
       </svg>
       <!-- Dark Mode Toggle -->
       <input
-        type="checkbox"
         v-model="darkMode"
-        class="toggle theme-controller"
+        type="checkbox"
+        class="toggle theme-controller toggle-accent"
         @click="toggleTheme"
       />
       <!-- Moon Icon -->
@@ -37,34 +37,37 @@
         stroke-linecap="round"
         stroke-linejoin="round"
       >
-        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
       </svg>
     </label>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted, watch } from "vue";
+import { ref, onBeforeMount, watch } from "vue";
 
-const colorMode = useColorMode();
 const darkMode = ref(false);
 
-// Function to set theme and store preference
+// Function to set theme by adding/removing dark class to html tag
 const applyTheme = (isDark: boolean) => {
-  const theme = isDark ? "dark" : "light";
-  document.documentElement.setAttribute("data-theme", theme);
-  localStorage.setItem("color-mode", theme);
-  colorMode.value = theme;
+  if (isDark) {
+    document.documentElement.classList.value = "dark";
+    document.documentElement.setAttribute("data-theme", "dark"); // Set DaisyUI theme to dark
+  } else {
+    document.documentElement.classList.value = "";
+    document.documentElement.setAttribute("data-theme", "light"); // Set DaisyUI theme to light
+  }
+  localStorage.setItem("color-mode", isDark ? "dark" : "light");
 };
 
 // Initialize theme based on stored preference or system preference
-onMounted(() => {
+onBeforeMount(() => {
   const storedTheme = localStorage.getItem("color-mode");
   if (storedTheme) {
     darkMode.value = storedTheme === "dark";
   } else {
     // Default to system preference
-    darkMode.value = colorMode.value === "dark";
+    darkMode.value = window.matchMedia("(prefers-color-scheme: dark)").matches;
   }
   applyTheme(darkMode.value);
 });

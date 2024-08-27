@@ -22,10 +22,12 @@ export default {
           "base-100": "#FFFFFF",
           "base-200": "#67E0B6",
           "base-300": "#38B589",
+          "base-400": "#17C286",
           info: "#3FBA8F",
-          success: "#17C286",
+          success: "#08d58d",
           warning: "#67E0B6",
           error: "#38B589",
+          "primary-darker": "#0c593e",
         },
       },
       {
@@ -38,7 +40,7 @@ export default {
           "base-200": "#243A36",
           "base-300": "#304843",
           info: "#67E0B6",
-          success: "#3FBA8F",
+          success: "#15b980",
           warning: "#17C286",
           error: "#243A36",
         },
@@ -46,4 +48,5 @@ export default {
     ],
   },
   plugins: [require("daisyui")],
+  darkMode: "class",
 };

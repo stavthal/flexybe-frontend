@@ -4,7 +4,7 @@
       <h1 class="mb-4 font-bold text-8xl text-primary">
         Flexify Your Workflow.
       </h1>
-      <p class="text-2xl text-white">
+      <p class="text-2xl text-darker dark:text-white">
         Streamline your projects with seamless tools that adapt to the way
         <span class="font-semibold text-success">you</span>
         work best.
@@ -14,7 +14,7 @@
       <div class="relative">
         <!-- Shadow container -->
         <div
-          class="absolute inset-0 bg-gray-700 rounded-md opacity-50 dark:bg-gray-300 blur-lg"
+          class="absolute inset-0 rounded-md opacity-50 bg-primary dark:bg-primary blur-lg"
         />
         <!-- Image with animation -->
         <!-- eslint-disable-next-line vue/html-self-closing -->
