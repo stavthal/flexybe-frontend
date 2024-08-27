@@ -19,6 +19,7 @@
         />
         <!-- Image with animation -->
         <img
+          testId="hero-image"
           :src="imageUrl"
           alt="Hero Image"
           :class="animationClass"

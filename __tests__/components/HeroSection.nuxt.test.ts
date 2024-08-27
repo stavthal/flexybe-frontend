@@ -14,3 +14,8 @@ it("component can be rendered", async () => {
   await renderSuspended(HeroSection);
   expect(screen.getByText(/Flexify/)).toBeDefined();
 });
+
+it("component should render an image", async () => {
+  await renderSuspended(HeroSection);
+  expect(screen.findByTestId("hero-image")).toBeDefined();
+});
